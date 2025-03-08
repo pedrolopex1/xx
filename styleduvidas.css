@@ -1,0 +1,156 @@
+body, html {
+    background-color: white;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para um controle mais consistente do tamanho */
+    overflow-x: hidden;
+}
+
+.header {
+
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Fixa o cabeçalho sem ele ir junto com a rolagem */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px 20px;
+    
+  }
+
+  
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.nav-menu {
+    display: flex;
+    
+}
+
+.nav-menu.active {
+    display: block; /* Menu aparece quando a classe 'active' é aplicada */
+    right: 0;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    
+}
+
+.nav-menu li a {
+    font-family: bebas neue;
+    color: white;
+    text-decoration: none;
+    font-size: 3.3rem;
+    transition: color 0.3s ease;
+  }
+
+.nav-menu li a:hover {
+    color: #FFD580; /* Destaque ao passar o mouse */
+}
+
+/* Botão de menu hambúrguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .nav-menu li a {
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-toggle.active + .nav-menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo img {
+        width: 120px;
+    }
+
+    .nav-menu li a {
+        font-size: 1rem;
+    }
+}
+
+.duvidas{
+    height: 78px;
+
+}
+
+
+
+.content {
+    display: none;
+    margin-top: 10px;
+
+}
+
+
+
+body{
+    font-family: bebas neue;
+
+}
+
+.toggle-button {
+    cursor: pointer;
+    color: orangered;
+    border: none;
+    background: none;
+    font-size: 16px;
+  }

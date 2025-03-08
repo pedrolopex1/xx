@@ -1,0 +1,1058 @@
+/* Estilos gerais */
+
+
+html{
+  overflow-x: hidden;
+}
+
+
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  top : 0 ;
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+  background-color: white; /* Evitar que o fundo da página crie discrepâncias */
+}
+
+.header {
+
+  
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Fixa o cabeçalho sem ele ir junto com a rolagem */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  padding: 10px 20px;
+}
+
+/* Remove qualquer margem ou padding extra na próxima seção */
+.apresentacao, .cards, .apresentacao2, .autoridade, .section__container {
+  margin-top: 0; /* Elimina margens extras entre o cabeçalho e o corpo */
+  padding-top: 0; /* Elimina padding extra */
+}
+
+/* Estilo do menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+
+
+.nav-menu li a {
+  color:white;
+  text-decoration: none;
+  font-size: 3.3rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #FFD580;
+}
+
+/* Menu hambúrguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    
+  }
+
+  .nav-menu.active {
+    display: block;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .nav-menu li a {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo img {
+    width: 100px;
+  }
+
+  .nav-menu li a {
+    font-size: 1rem;
+  }
+}
+
+
+.apresentacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(imagens/fundo2.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 2rem;
+}
+
+/* Container do conteúdo (mantido para telas grandes) */
+.conteudo-apresentacao {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o texto (mantidos para telas grandes) */
+.texto-overlay h1 {
+  font-size: 3em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.texto-overlay p {
+  font-size: 1.5em;
+  color: #555;
+  margin: 10px 0;
+}
+
+.texto-overlay .descricao {
+  font-size: 1.2em;
+  color: #777;
+  margin-top: 20px;
+}
+
+/* Estilos para o botão do WhatsApp (mantidos para telas grandes) */
+.botao-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.botao-whatsapp i {
+  font-size: 1.5em;
+}
+
+/* Efeito de hover no botão */
+.botao-whatsapp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Aplicar margem inferior apenas para telas maiores que 768px */
+@media (min-width: 769px) {
+  .apresentacao2 .botao-whatsapp {
+    margin-bottom: 50px; /* Margem inferior para telas grandes */
+  }
+}
+
+
+/* Ajustes adicionais para telas muito pequenas (largura máxima de 480px) */
+@media (max-width: 480px) {
+  .texto-overlay h1 {
+    font-size: 1.8em; /* Reduz ainda mais o tamanho da fonte */
+  }
+
+  .texto-overlay p {
+    font-size: 1em; /* Reduz ainda mais o tamanho da fonte */
+  }
+
+  .texto-overlay .descricao {
+    font-size: 0.9em; /* Reduz ainda mais o tamanho da fonte */
+  }
+
+  .botao-whatsapp {
+    font-size: 0.9em; /* Reduz ainda mais o tamanho da fonte */
+  }
+}
+.cards {
+  
+  background-color: orangered;
+  display: flex; /* Ativa o flexbox */
+  justify-content: flex-start; /* Alinha os itens no início */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  gap: 20px; /* Espaçamento entre os cards */
+  padding: 20px;
+  flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
+  margin-bottom: 0; /* Remove o espaço inferior da seção */
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 25%; /* Largura dos cards em telas grandes */
+  height: 500px; /* Altura dos cards */
+  margin: 10px 40px; /* Ajusta a margem entre os cards para evitar gap indesejado */
+  margin-left: 90px;
+  transition: transform 0.2s;
+}
+
+.card img {
+  width: 100%;
+  height: 250px; /* Foto proporcional à altura */
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 40px;
+  color: #333;
+}
+
+.card p {
+  margin: 10px;
+  font-size: 100px;
+  color: #666;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .card {
+      width: 100%; /* Faz os cards ocuparem 100% da largura da tela em dispositivos móveis */
+      height: auto;
+      margin-left: 40px; /* Ajusta a altura automaticamente conforme o conteúdo */
+  }
+}
+
+/* Remove qualquer espaço extra abaixo da seção */
+.informações {
+  padding-top: 20px;
+  margin-top: 0; /* Remove a margem superior se existir */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .card {
+      width: calc(50% - 20px); /* Dois cards por linha em tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: 100%; /* Um card por linha em dispositivos móveis */
+  }
+
+  .card h3 {
+      font-size: 1.5em; /* Reduz o tamanho da fonte para telas pequenas */
+  }
+
+  .card p {
+      font-size: 0.9em; /* Reduz o tamanho da fonte para telas pequenas */
+  }
+}
+
+/* Estilos para a seção .apresentacao2 */
+/* Estilos gerais para .apresentacao2 */
+.apresentacao2 {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Altura total da tela */
+  background-image: url(imagens/in.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Espaçamento interno */
+}
+
+/* Overlay da seção */
+.apresentacao2-overlay {
+  text-align: center; /* Centraliza o conteúdo */
+  max-width: 90%; /* Limita a largura do conteúdo */
+  padding: 20px;
+  
+}
+
+@media (min-width: 769px) {
+  .apresentacao2 .botao-whatsapp {
+    margin-top: 500px; /* Margem inferior para telas grandes */
+  }
+}
+
+
+/* Estilos para o botão do WhatsApp */
+.botao-whatsapp {
+  
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #25d366; /* Cor verde do WhatsApp */
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2em; /* Tamanho da fonte */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+
+
+.botao-whatsapp i {
+  font-size: 1.5em; /* Tamanho do ícone */
+}
+
+/* Efeito de hover no botão */
+.botao-whatsapp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .apresentacao2 {
+    height: auto; /* Altura automática para dispositivos móveis */
+    min-height: 100vh; /* Garante que a seção ocupe pelo menos a altura da tela */
+    padding: 10px; /* Reduz o padding */
+  }
+
+  .apresentacao2-overlay {
+    padding: 15px; /* Reduz o padding */
+  }
+
+  .botao-whatsapp {
+    font-size: 1em; /* Reduz o tamanho da fonte */
+    padding: 8px 16px; /* Reduz o padding */
+  }
+
+  .botao-whatsapp i {
+    font-size: 1.2em; /* Reduz o tamanho do ícone */
+  }
+}
+
+@media (max-width: 480px) {
+  .apresentacao2 {
+    padding: 5px; /* Reduz ainda mais o padding */
+  }
+
+  .apresentacao2-overlay {
+    padding: 10px; /* Reduz ainda mais o padding */
+  }
+
+  .botao-whatsapp {
+    font-size: 0.9em; /* Reduz ainda mais o tamanho da fonte */
+    padding: 6px 12px; /* Reduz ainda mais o padding */
+  }
+
+  .botao-whatsapp i {
+    font-size: 1em; /* Reduz ainda mais o tamanho do ícone */
+  }
+}
+
+/* Efeito de hover no botão */
+.botao-whatsapp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Texto destacado */
+.apresentacao2-highlight {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4em;
+  margin: 0.2em 0;
+  color: orangered;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsividade para o texto destacado */
+@media (max-width: 768px) {
+  .apresentacao2-highlight {
+      font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .apresentacao2-highlight {
+      font-size: 2em;
+  }
+}
+
+
+
+.autoridade{
+    height: 90vh;
+    background-color: white;
+    background-image: url(https://images.alphacoders.com/133/1330621.jpg);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: black;
+  --secondary-color: #e8e8e8;
+  --text-dark: #0f172a;
+  --text-light: #94a3b8;
+  --white: #ffffff;
+}
+
+.section__grid {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%;
+  overflow: hidden;
+  padding: 0; /* Remove padding extra */
+  margin: 0; /* Remove margens extras */
+}
+
+.section__card {
+  display: none; /* Oculta todos os cards por padrão */
+  width: 110%; /* Aumenta a largura do card */
+  max-width: 1100px; /* Define uma largura máxima */
+  margin: 0 auto; /* Centraliza o card */
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease-in-out;
+  height: 600px;
+}
+
+.section__card.active {
+  display: block; /* Exibe apenas o card ativo */
+}
+
+
+
+.section__container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.section__container h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.section__container h1 {
+  position: relative;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.section__container h1::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 5rem;
+  background-color: var(--primary-color);
+}
+
+section__grid {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 150%;
+  overflow: hidden;
+}
+
+.section__card {
+  display: none; /* Oculta todos os cards por padrão */
+  width: 90%; /* Aumenta a largura do card */
+  max-width: 1000px; /* Define uma largura máxima para evitar que fique muito largo em telas grandes */
+  margin: 0 auto; /* Centraliza o card */
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section__card.active {
+  display: block; /* Exibe apenas o card ativo */
+}
+
+
+.section__card span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.section__card h4 {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  font-size: 2.0rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.section__card p {
+  font-size: 1.em;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.section__card img {
+  margin-bottom: 1rem;
+  max-width: 100px;
+  border-radius: 100%;
+  border: 2px solid var(--primary-color);
+  transition: 0.3s;
+}
+
+.section__card h5 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.section__card h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+
+
+
+
+
+.numeros {
+  background: linear-gradient(135deg, #ff6600, #1a1a1a);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.numeros .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.numeros .carrossel {
+  display: flex;
+  
+  width: 100%; /* Garante que o carrossel ocupe toda a largura disponível */
+  position: relative;
+}
+
+.numeros .slide {
+  width: 100%; /* Cada slide ocupa 100% da largura do carrossel */
+  transition: transform 1s ease; /* A transição será suave */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-shrink: 0; /* Impede o encolhimento do slide */
+}
+
+.numeros .numero {
+  font-size: 4.5em;
+  font-weight: bold;
+  color: white;
+}
+
+.numeros .descricao {
+  font-size: 3.2em;
+  color: black;
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .numeros .numero {
+    font-size: 3.5em;
+  }
+
+  .numeros .descricao {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .numeros .numero {
+    font-size: 2.8em;
+  }
+
+  .numeros .descricao {
+    font-size: 2em;
+  }
+}
+
+/* Estilos gerais */
+.apresentacao3 {
+  font-size: 3.7em;
+  padding-right: 5%;
+  position: relative;
+  background: white;
+  overflow: hidden;
+  padding-bottom: 400px; /* Adiciona espaço para o bottom-left-element */
+}
+
+.apresentacao3 .content {
+  padding-left: 10%;
+  text-align: left;
+}
+
+.apresentacao3 .content p {
+  margin-bottom: 15px;
+  font-size: 2.5vw;
+  line-height: 1.5;
+}
+
+.apresentacao3 .content p:nth-child(2),
+.apresentacao3 .content p:nth-child(3) {
+  font-size: 2vw;
+  color: darkgray;
+}
+
+.apresentacao3 .content p:nth-child(4) {
+  color: orangered;
+  font-size: 2vw;
+}
+
+/* Imagem responsiva */
+.mulher {
+  width: 700px;
+  height: 700px;
+  background-image: url('imagens/larissa3.jpg');
+  background-size: cover;
+  background-position: top center;
+  position: absolute;
+  left: 80%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Bordas responsivas */
+
+.top-right-element {
+  background-image: url(imagens/fundo6.png);
+  width: 450px;
+  height: 450px;
+  background-color: bg-danger;
+  clip-path: polygon(100% 0, 0 0, 100% 100%); /* Invertido em relação ao bottom-left */
+  position: absolute;
+  right: 0; /* Posiciona no canto superior direito */
+  top: 0; /* Colado ao topo */
+  background-size: cover; /* Garante que a imagem cubra toda a área */
+  background-position: center; /* Centraliza a imagem */
+  z-index: 0; /* Garante que fique atrás do conteúdo */
+}
+
+/* Estilos para o bottom-left-element */
+.bottom-left-element {
+  width: 450px;
+  height: 450px;
+  clip-path: polygon(0 100%, 0 0, 100% 100%); /* Formato invertido */
+  position: absolute;
+  left: 0; /* Posiciona no canto inferior esquerdo */
+  bottom: 0; /* Colado ao fundo */
+  background-image: url(imagens/fundo6.png);
+  background-size: cover; /* Garante que a imagem cubra toda a área */
+  background-position: center; /* Centraliza a imagem */
+  z-index: 0; /* Garante que fique atrás do conteúdo */
+}
+
+.bottom-left-element {
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+  left: 0;
+  bottom: 0;
+}
+
+.top-right-element,
+.bottom-left-element {
+
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.top-right-element {
+  clip-path: polygon(100% 0, 20% 0, 100% 80%); /* Borda mais fina */
+  right: 0;
+  top: 0;
+}
+
+.bottom-left-element {
+  clip-path: polygon(0 100%, 0 20%, 80% 100%); /* Borda mais fina */
+  left: 0;
+  bottom: 0;
+}
+
+/* Tamanho padrão para telas grandes */
+.top-right-element,
+.bottom-left-element {
+  width: 250px; /* Largura menor */
+  height: 250px; /* Altura menor */
+}
+
+/* Responsividade para telas médias (tablets) */
+@media (max-width: 768px) {
+  .top-right-element,
+  .bottom-left-element {
+    width: 150px; /* Reduzindo ainda mais */
+    height: 150px;
+  }
+
+  .top-right-element {
+    clip-path: polygon(100% 0, 30% 0, 100% 70%); /* Ajuste fino para tablets */
+  }
+
+  .bottom-left-element {
+    clip-path: polygon(0 100%, 0 30%, 70% 100%); /* Ajuste fino para tablets */
+  }
+}
+
+/* Responsividade para telas pequenas (smartphones) */
+@media (max-width: 480px) {
+  .top-right-element,
+  .bottom-left-element {
+    width: 100px; /* Tamanho mínimo */
+    height: 100px;
+  }
+
+  .top-right-element {
+    clip-path: polygon(100% 0, 40% 0, 100% 60%); /* Ajuste fino para smartphones */
+  }
+
+  .bottom-left-element {
+    clip-path: polygon(0 100%, 0 40%, 60% 100%); /* Ajuste fino para smartphones */
+  }
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 1400px) {
+  .top-right-element,
+  .bottom-left-element {
+    width: 200px;
+    height: 200px;
+  }
+
+  .apresentacao3 {
+    padding-bottom: 300px; /* Reduz o espaço para telas médias */
+  }
+}
+
+@media (max-width: 768px) {
+  .apresentacao3 {
+    padding-right: 0;
+    padding-bottom: 250px; /* Ajuste para tablets */
+  }
+
+  .apresentacao3 .content {
+    padding-left: 5%;
+  }
+
+  .apresentacao3 .content p {
+    font-size: 4vw;
+  }
+
+  .apresentacao3 .content p:nth-child(2),
+  .apresentacao3 .content p:nth-child(3) {
+    font-size: 3.5vw;
+  }
+
+  .apresentacao3 .content p:nth-child(4) {
+    font-size: 3.5vw;
+  }
+
+  .mulher {
+    width: 100%;
+    height: auto;
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .top-right-element,
+  .bottom-left-element {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apresentacao3 .content p {
+    font-size: 5vw;
+  }
+
+  .apresentacao3 .content p:nth-child(2),
+  .apresentacao3 .content p:nth-child(3) {
+    font-size: 4.5vw;
+  }
+
+  .apresentacao3 .content p:nth-child(4) {
+    font-size: 4.5vw;
+  }
+
+  
+
+  .apresentacao3 {
+    padding-bottom: 200px; /* Ajuste final para smartphones */
+  }
+}
+
+.content {
+  z-index: 1;
+}
+
+.content h1 {
+  padding-top: 55px;
+  color: orangered;
+  position: absolute;
+  right: 0;
+}
+
+
+
+.localizacao iframe {
+  border: 1px solid #000; /* Ou qualquer outra borda padrão */
+}
+
+/* Estilo para telas pequenas, removendo a borda */
+@media (max-width: 768px) {
+  .localizacao iframe {
+      border: none !important; /* Remove a borda com !important */
+  }
+}
+
+
+
+/* Media query para telas menores */
+@media (max-width: 1600px) { 
+  .mulher {
+    visibility: hidden; /* Esconde a imagem assim que a largura da tela for menor que 1200px */
+  }
+}
+
+@media (max-width: 768px) {
+  .localizacao {
+      padding-left: 0; /* Remove o padding-left em telas menores */
+  }
+}
+
+
+
+
+/* Estilos gerais do footer */
+.rodape {
+  
+  background-color: #333; /* Cor de fundo escura para o footer */
+  color: white; /* Cor do texto */
+  padding: 2rem 1rem; /* Espaçamento interno */
+  font-family: 'Bebas Neue', sans-serif; /* Fonte personalizada */
+  font-size: 1.6em; /* Tamanho da fonte */
+  padding: 0.1rem 0.3rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+  max-width: 1200px; /* Largura máxima do container */
+  margin: 0 auto; /* Centraliza o container */
+  gap: 2rem; /* Espaçamento entre as colunas */
+}
+
+.sobre, .contato, .duvidas {
+  flex: 1 1 200px; /* Flex-grow, flex-shrink e flex-basis */
+  margin-bottom: 1.5rem; /* Espaçamento inferior para dispositivos móveis */
+}
+
+.rodape h3 {
+  color: orangered; /* Cor do título */
+  font-size: 1.4em; /* Tamanho da fonte do título */
+  margin-bottom: 1rem; /* Espaçamento inferior */
+}
+
+.rodape ul {
+  list-style: none; /* Remove os marcadores de lista */
+  padding: 0; /* Remove o padding padrão */
+}
+
+.rodape ul li {
+  margin-bottom: 0.8rem; /* Espaçamento entre os itens da lista */
+}
+
+.rodape ul li a {
+  color: white; /* Cor dos links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  transition: color 0.3s ease; /* Transição suave para hover */
+}
+
+.rodape ul li a:hover {
+  color: orangered; /* Cor dos links ao passar o mouse */
+}
+
+.duvidas ul {
+  display: flex; /* Alinha os ícones horizontalmente */
+  gap: 1rem; /* Espaçamento entre os ícones */
+}
+
+.duvidas ul li a {
+  font-size: 1.5em; /* Tamanho dos ícones */
+}
+
+.logo {
+  text-align: center; /* Centraliza a logo */
+  margin-top: 2rem; /* Espaçamento superior */
+}
+
+.logo img {
+  max-width: 300px; /* Tamanho máximo da logo */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Altera a direção para coluna em telas menores */
+      align-items: center; /* Centraliza os itens */
+      text-align: center; /* Centraliza o texto */
+  }
+
+  .sobre, .contato, .duvidas {
+      flex: 1 1 100%; /* Ocupa 100% da largura em telas menores */
+  }
+
+  .duvidas ul {
+      justify-content: center; /* Centraliza os ícones das redes sociais */
+  }
+
+  .logo img {
+      max-width: 120px; /* Reduz o tamanho da logo em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .rodape {
+      font-size: 1.4em; /* Reduz o tamanho da fonte para telas muito pequenas */
+  }
+
+  .rodape h3 {
+      font-size: 1.2em; /* Reduz o tamanho da fonte dos títulos */
+  }
+
+  .duvidas ul li a {
+      font-size: 1.2em; /* Reduz o tamanho dos ícones das redes sociais */
+  }
+
+  .rodape .logo img {
+      max-width: 100px; /* Reduz ainda mais o tamanho da logo */
+  }
+}
+
+@media (min-width:760px){
+  .rodape .logo{
+    margin-left: 1500px;
+    }
+}
+
+
+
+
+
+
+  
+ 
+
