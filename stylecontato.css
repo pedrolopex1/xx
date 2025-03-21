@@ -87,7 +87,8 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    padding: 10px 20px;
+    padding: 13px 20px;
+    
   }
 
   
@@ -184,13 +185,16 @@ body {
 
 @media (max-width: 480px) {
     .header .logo img {
-        width: 120px;
+      width: 200px; /* Ajuste para um valor adequado */
+      height: auto; /* Mantém a proporção da imagem */
+      padding-top: 28px;
     }
 
     .nav-menu li a {
         font-size: 1rem;
     }
 }
+
 
 
 .formulario{
@@ -268,113 +272,6 @@ textarea.input-box {
     background-color: #cc6200;
 }
 
-@media (max-width: 768px) {
-    body, html {
-        font-size: 14px; /* Tamanho da fonte menor em dispositivos móveis */
-    }
 
-    .contato-titulo {
-        font-size: 1.5em; /* Reduzido */
-    }
-
-    .contato-info {
-        font-size: 0.9em; /* Reduzido */
-    }
-
-    h2 {
-        font-size: 1.5em; /* Reduzido */
-        padding-left: 20px; /* Ajuste de padding para dispositivos móveis */
-    }
-
-    .content {
-        padding-left: 20px; /* Ajuste de padding para dispositivos móveis */
-    }
-
-    .toggle-button {
-        padding-left: 20px; /* Ajuste de padding para dispositivos móveis */
-    }
-
-    .header .logo img {
-        width: 100px; /* Reduzido */
-    }
-
-    .nav-menu li a {
-        font-size: 1.2rem; /* Reduzido */
-    }
-}
-
-@media (max-width: 480px) {
-    body, html {
-        font-size: 12px; /* Tamanho da fonte ainda menor em dispositivos muito pequenos */
-    }
-
-    .contato-titulo {
-        font-size: 1.2em; /* Reduzido */
-    }
-
-    .contato-info {
-        font-size: 0.8em; /* Reduzido */
-    }
-
-    h2 {
-        font-size: 1.2em; /* Reduzido */
-        padding-left: 10px; /* Ajuste de padding para dispositivos muito pequenos */
-    }
-
-    .content {
-        padding-left: 10px; /* Ajuste de padding para dispositivos muito pequenos */
-    }
-
-    .toggle-button {
-        padding-left: 10px; /* Ajuste de padding para dispositivos muito pequenos */
-    }
-
-    .header .logo img {
-        width: 80px; /* Reduzido */
-    }
-
-    .nav-menu li a {
-        font-size: 1rem; /* Reduzido */
-    }
-}
-
-@media (max-width: 768px) {
-    .header {
-        padding: 10px; /* Reduzido */
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        gap: 10px; /* Reduzido */
-        padding: 10px 0; /* Reduzido */
-    }
-
-    .nav-menu li a {
-        font-size: 1.2rem; /* Reduzido */
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .menu-toggle.active + .nav-menu {
-        display: flex;
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
-        padding: 5px; /* Reduzido */
-    }
-
-    .nav-menu ul {
-        gap: 5px; /* Reduzido */
-        padding: 5px 0; /* Reduzido */
-    }
-
-    .nav-menu li a {
-        font-size: 1rem; /* Reduzido */
-    }
-}
 
 
