@@ -136,7 +136,8 @@ body {
 
 @media (max-width: 480px) {
   .header .logo img {
-    width: 100px;
+    width: 200px; /* Ajuste para um valor adequado */
+    height: auto; /* Mantém a proporção da imagem */
   }
 
   .nav-menu li a {
@@ -998,10 +999,7 @@ section__grid {
   margin-top: 2rem; /* Espaçamento superior */
 }
 
-.logo img {
-  max-width: 300px; /* Tamanho máximo da logo */
-  height: auto; /* Mantém a proporção da imagem */
-}
+
 
 /* Media Queries para dispositivos móveis */
 @media (max-width: 768px) {
@@ -1019,9 +1017,7 @@ section__grid {
       justify-content: center; /* Centraliza os ícones das redes sociais */
   }
 
-  .logo img {
-      max-width: 120px; /* Reduz o tamanho da logo em telas menores */
-  }
+  
 }
 
 @media (max-width: 480px) {
@@ -1036,10 +1032,11 @@ section__grid {
   .duvidas ul li a {
       font-size: 1.2em; /* Reduz o tamanho dos ícones das redes sociais */
   }
+  
+  
+  
 
-  .rodape .logo img {
-      max-width: 100px; /* Reduz ainda mais o tamanho da logo */
-  }
+  
 }
 
 @media (min-width:760px){
