@@ -21,7 +21,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    padding: 10px 20px;
+    padding: 13px 20px;
     
   }
 
@@ -119,7 +119,9 @@ body, html {
 
 @media (max-width: 480px) {
     .header .logo img {
-        width: 120px;
+      width: 200px; /* Ajuste para um valor adequado */
+      height: auto; /* Mantém a proporção da imagem */
+      padding-top: 28px;
     }
 
     .nav-menu li a {
